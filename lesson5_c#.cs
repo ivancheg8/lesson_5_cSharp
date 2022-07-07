@@ -1,4 +1,4 @@
-﻿//общий блок из 2-х методов
+﻿//общий блок из 2-х методов для всех задач
 
 double[] createRandArrayIntDouble(int size, int min, int max, bool a) //true - целые числа, false - вещественные
 {
