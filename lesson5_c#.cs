@@ -1,6 +1,6 @@
 ﻿//общий блок из 2-х методов
 
-double[] createRandArrayIntDouble(int size, int min, int max, bool a) //true - целые, false - вещественные
+double[] createRandArrayIntDouble(int size, int min, int max, bool a) //true - целые числа, false - вещественные
 {
     double[] array = new double[size];
     if (a == true)
@@ -24,13 +24,16 @@ void showArray(double[] array2)
     Console.WriteLine();
 }
 
+
+
+
 /* 
 Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
 Напишите программу, которая покажет количество чётных чисел в массиве.
 [345, 897, 568, 234] -> 2
 */
 
-void even(int[] array3)
+void even(double[] array3)
 {
     int count = 0;
     for (int i = 0; i < array3.Length; i++)
@@ -38,9 +41,10 @@ void even(int[] array3)
     Console.WriteLine("Количество чётных чисел в массиве: " + count);
 }
 
-int[] myArray = createRandArrayIntDouble(10, 100, 1000, true);
+double[] myArray = createRandArrayIntDouble(10, 100, 1000, true); //true - целые числа
 showArray(myArray);
 even(myArray);
+
 
 
 
@@ -51,17 +55,18 @@ even(myArray);
 [-4, -6, 89, 6] -> 0
 */
 
-void SumUnevenPos(int[] array4)
+void SumUnevenPos(double[] array4)
 {
-    int count = 0;
+    double count = 0;
     for (int i = 0; i < array4.Length; i++)
         if (i % 2 == 0) count = count + array4[i];
     Console.WriteLine(count);
 }
 
-int[] myArray = createRandArrayIntDouble(5, 1, 10, true);
+double[] myArray = createRandArrayIntDouble(5, 1, 10, true); //true - целые числа
 showArray(myArray);
 SumUnevenPos(myArray);
+
 
 
 
@@ -80,10 +85,9 @@ void VeshMinMax(double[] array5)
         if (max < array5[i]) max = array5[i];
         if (min > array5[i]) min = array5[i];
     }
-    double a = max-min;
-    Console.WriteLine("Разница: " + a);
+    Console.WriteLine("Разница: " + (max - min));
 }
 
-double[] myArray = createRandArrayIntDouble(5, 1, 10, false);
+double[] myArray = createRandArrayIntDouble(5, 1, 10, false); //false - вещественные числа
 showArray(myArray);
 VeshMinMax(myArray);
